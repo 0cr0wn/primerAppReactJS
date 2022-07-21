@@ -1,16 +1,16 @@
 
 
 
-const NavBar = ({Boton1, Boton2, Boton3}) => {
- 
+export default function NavBar ({Boton1, Boton2, Boton3}) {
 
  return(<div>
-    <h3 onClick={()=>alert('Seccion Tulio')}>{Boton1}</h3>
-    <p>Mi nombre es Tulio.</p>
-    <h3 onClick={()=>alert('Seccion Desarrollador')}>{Boton2}</h3>
-    <h3 onClick={()=>alert('Seccion Contacto')}>{Boton3}</h3>
+    <ul style={{display: 'flex', margin: '10px', padding:'10px', justifyContent: 'center', listStyle: 'none'}}>
+    <li style={{padding:'10px'}} onClick={()=>alert('Seccion Tulio')}>{Boton1}</li>
+    <li style={{padding:'10px'}} onClick={()=>alert('Seccion Desarrollador')}>{Boton2}</li>
+    <li style={{padding:'10px'}} onClick={()=>alert('Seccion Contacto')}>{Boton3}</li>
+  </ul>
   </div>
 )}
 
-export default NavBar
+
 
