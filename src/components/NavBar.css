@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid{
+    display: flex;
+    background-color:#2741E8;
+
+}
+
+ul{  
+   
+    
+    margin: 10px; 
+    padding:10px; 
+    list-style:none
+}
+
+li{
+    display: inline;
+    margin: 0.6rem;
+    padding: 2rem;
+    font-size: 20px;
+    color: white;
+
+
+}
+
+li:hover{
+   
+   background-color: #18236B; 
+   border-radius: 15%;  
+}

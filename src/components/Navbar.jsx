@@ -1,14 +1,20 @@
-
-
-
+import CartWidget from "./CartWidget";
+import './NavBar.css'
 export default function NavBar ({Boton1, Boton2, Boton3}) {
+   
 
- return(<div>
-    <ul style={{display: 'flex', margin: '10px', padding:'10px', justifyContent: 'center', listStyle: 'none'}}>
-    <li style={{padding:'10px'}} onClick={()=>alert('Seccion Tulio')}>{Boton1}</li>
-    <li style={{padding:'10px'}} onClick={()=>alert('Seccion Desarrollador')}>{Boton2}</li>
-    <li style={{padding:'10px'}} onClick={()=>alert('Seccion Contacto')}>{Boton3}</li>
+ return(<div className="container-fluid">
+    <h1 className="col-3">Games planet</h1>
+
+    <ul className="container col-6">
+   
+    <li className="col-3" onClick={()=>alert('Seccion Inicio')}>{Boton1}</li>
+    
+    <li className="col-3"  onClick={()=>alert('Seccion Juegos')}>{Boton2}</li>
+    <li className="col-3"  onClick={()=>alert('Seccion Contacto')}>{Boton3}</li>
   </ul>
+  <CartWidget className="col-3" ></CartWidget>
+  
   </div>
 )}
 

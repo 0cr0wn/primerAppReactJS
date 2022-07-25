@@ -5,12 +5,8 @@ import App from './App'
 ReactDOM.createRoot(document.getElementById('root')).render(
   
   <div>
-    <h1>hola mundo</h1>
   <App />
-  
  
- 
-
-  </div>)
-
+  </div>
+)
 
