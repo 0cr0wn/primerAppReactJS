@@ -1,16 +1,25 @@
 import ProductList from './components/ProductList'
 import './index.css'
 import NavBar from "./components/NavBar"
+import { BrowserRouter } from 'react-router-dom'
 function App() {
     return(
-    <div>
-     <NavBar 
+    <BrowserRouter>
+    <NavBar 
      Boton1='Inicio'
      Boton2='Juegos'
      Boton3='Contacto'>
      </NavBar>
-     <ProductList/>
-    </div>)
+     <Routes>
+   
+          <Route exact path="/" element={<ProductList/>}>
+            < ProductList/>
+          </Route>
+    </Routes>
+    </BrowserRouter>
+
+
+    )
 }
 
 export default App

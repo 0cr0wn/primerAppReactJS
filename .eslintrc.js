@@ -12,7 +12,8 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'standard',
-    'eslint-config-prettier'
+    'eslint-config-prettier',
+    'jsx-no-undef'
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -26,5 +27,6 @@ module.exports = {
   ],
   rules: {
     'react/prop-types': 'off',
+    'jsx-no-undef': 'off'
   }
 }
