@@ -10,26 +10,26 @@
 
 }
 
-ul{  
+.container{  
    
     
     margin: 10px; 
     padding:10px; 
-    list-style:none
+    
 }
 
-li{
+.btnNv {
     display: inline;
     margin: 0.6rem;
     padding: 2rem;
     font-size: 20px;
     color: white;
-
+    text-decoration: none;
 
 }
 
-li:hover{
-   
+.btnNv:hover{
+   color: black;
    background-color: #18236B; 
    border-radius: 15%;  
 }

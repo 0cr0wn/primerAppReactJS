@@ -1,4 +1,5 @@
  import './CartWidget.css'
+import ProductCount from './ProductCount'
  import ProductItem from './ProductItem'
 
 const CartWidget =()=> {
@@ -6,7 +7,7 @@ const CartWidget =()=> {
         <>
         <img className="icon" src="/CartWidgetIcon.png" alt="icono carrito"/>
         <div>
-            <p>{addProducto}</p>
+            <p>{<ProductCount/>}</p>
         </div>
         </>
         
