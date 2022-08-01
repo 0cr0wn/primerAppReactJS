@@ -1,13 +1,13 @@
-import ProductList from './components/ProductList'
 import './index.css'
 import NavBar from "./components/NavBar"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import ProductCount from './components/ProductCount'
-import {useState} from 'react'
+import ProductListContainer from './components/ProductListContainer'
+
 function App() {
 
     return(
     <BrowserRouter>
+   
     <NavBar 
      Boton1='Inicio'
      Boton2='Juegos'
@@ -15,8 +15,8 @@ function App() {
     
      </NavBar>
      <Routes>
-   
-          <Route path="/" element={<ProductList/>}/>
+    
+          <Route path="/" element={<ProductListContainer/>}/>
     </Routes>
     </BrowserRouter>
 

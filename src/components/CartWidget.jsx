@@ -1,13 +1,12 @@
- import './CartWidget.css'
-import ProductCount from './ProductCount'
- import ProductItem from './ProductItem'
+import './CartWidget.css'
 
-const CartWidget =()=> {
+
+const CartWidget =({addProduct})=> {
     return(
         <>
         <img className="icon" src="/CartWidgetIcon.png" alt="icono carrito"/>
         <div>
-            <p>{<ProductCount/>}</p>
+            <p>{addProduct}</p>
         </div>
         </>
         
