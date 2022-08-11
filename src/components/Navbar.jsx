@@ -1,7 +1,7 @@
 import CartWidget from "./CartWidget";
-import {Link} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 import './NavBar.css'
-import ProductList from "./ProductList";
+
 export default function NavBar ({Boton1, Boton2, Boton3}) {
    
 
@@ -10,10 +10,10 @@ export default function NavBar ({Boton1, Boton2, Boton3}) {
 
     <div className="container col-6">
    
-    <Link to={<ProductList/>} className="col-3 btnNv">{Boton1}</Link>
+    <NavLink to='/' className="col-3 btnNv">{Boton1}</NavLink>
     
-    <Link to={<ProductList/>} className="col-3 btnNv">{Boton2}</Link>
-    <Link to={<ProductList/>} className="col-3 btnNv">{Boton3}</Link>
+    <NavLink to='/categoria' className="col-3 btnNv">{Boton2}</NavLink>
+    <NavLink to='/carrito' className="col-3 btnNv">{Boton3}</NavLink>
     </div>
   <CartWidget className="col-3" ></CartWidget>
   

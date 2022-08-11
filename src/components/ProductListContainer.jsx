@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import ProductDetailContainer from "./ProductDetailContainer"
 import ProductList from "./ProductList"
 
 
@@ -20,9 +21,8 @@ export default function ProductListContainer (){
 
 
     const productItems = new Promise((res,rej)=>{
-      setTimeout(()=>{
         res(products)
-      },2000)
+      
     }) 
 
     productItems.then((res)=>{
@@ -30,9 +30,13 @@ export default function ProductListContainer (){
     })
 },[])
 
-console.log(productData);
 
-return (<ProductList  productData={productData}/>
+return (
+        <div>
+        <ProductList  productData={productData}/>
+       
+</div>
+
 )
 
 }

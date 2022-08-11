@@ -1,6 +1,7 @@
 
 import './ProductItem.css'
-const ProductItem = ({productData},{addProducto}) =>{
+import ButtonAdd from './ButtonAdd'
+const ProductItem = ({productData}) =>{
   return(
    
     <div className="col-3"> 
@@ -11,7 +12,8 @@ const ProductItem = ({productData},{addProducto}) =>{
    <div className="card-body">
     <h5 className="card-title">{productData.titulo}</h5>
     <p className="card-text">{productData.descripcion}</p>
-    <button onClick={addProducto} className="btn btn-primary">Agregar</button>
+    <ButtonAdd></ButtonAdd>
+    
   </div>
   </div>
 </div>

@@ -1,22 +1,14 @@
 import { useState } from "react"
-import CartWidget from "./CartWidget"
-import ProductItem from "./ProductItem"
+import ButtonAdd from "./ButtonAdd"
 
-export default function ProductCount(){
+
+
+export default function ButtonDelete () {
+       const [addProducto,setAddProducto] = useState(0)
  
-    const [addProducto,setAddProducto] = useState(0)
-  const suma = () => {
-    setAddProducto(addProducto++)
-    
-  }
-  console.log({addProducto});
-  return(
-    <>
-    <CartWidget addProducto={addProducto}/>
-    <ProductItem addProducto={addProducto}/>
-    </>
-     
-  )
+     const suma = ()=>{ setAddProducto(setAddProducto+1)
+     }
+     const resta = ()=> setAddProducto(setAddProducto-1)
 
+return <ButtonAdd suma={suma} resta={resta} addProducto={addProducto}/>
 }
-

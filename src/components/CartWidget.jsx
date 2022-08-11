@@ -1,12 +1,15 @@
+import ButtonAdd from './ButtonAdd'
 import './CartWidget.css'
 
 
-const CartWidget =({addProduct})=> {
+const CartWidget =({addProducto})=> {
+    const carrito = []
     return(
         <>
         <img className="icon" src="/CartWidgetIcon.png" alt="icono carrito"/>
         <div>
-            <p>{addProduct}</p>
+        <ButtonAdd carrito={carrito}/>
+            <p>cantidad: {addProducto}</p>
         </div>
         </>
         
