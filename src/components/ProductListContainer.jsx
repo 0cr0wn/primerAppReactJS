@@ -33,8 +33,8 @@ export default function ProductListContainer (){
 
 return (
         <div>
-        <ProductList  productData={productData}/>
-       
+        <ProductList productData={productData}/>
+        <ProductDetailContainer productData={productData}/>
 </div>
 
 )
