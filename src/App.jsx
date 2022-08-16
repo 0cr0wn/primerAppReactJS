@@ -3,26 +3,39 @@ import NavBar from "./components/NavBar"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ProductListContainer from './components/ProductListContainer'
 import ProductDetailContainer from './components/ProductDetailContainer'
+import Checkout from './components/Checkout'
+import Cart from './components/Cart'
+import CartContextComponent from './components/CartContextComponent'
+
+
+
 
 function App() {
 
+
     return(
-    <BrowserRouter>
-   
-    <NavBar 
-     Boton1='Inicio'
-     Boton2='Juegos'
-     Boton3='Contacto'>
     
-     </NavBar>
+   <> 
+   <CartContextComponent>
+     <BrowserRouter>
+   
+       <NavBar 
+        Boton1='Inicio'
+        Boton2='Juegos'
+        Boton3='Contacto'/>
+    
+     
      <Routes>
          <Route path="/" element={<ProductListContainer/>}/>
-         <Route path="/categoria" element={<ProductListContainer/>}/>
-         <Route path='/detalle' element={<ProductDetailContainer/>}/>
-    </Routes>
+         <Route path="/category/:idCategory" element={<ProductListContainer/>}/>
+         <Route path='/product/:idProduct' element={<ProductDetailContainer/>}/>
+         <Route path="/cart" element={<Cart/>}/>
+         <Route path="/checkout" element={<Checkout/>}/>
+     </Routes>
     
-    </BrowserRouter>
-
+     </BrowserRouter>
+    </CartContextComponent>
+ </>
 
     )
 }

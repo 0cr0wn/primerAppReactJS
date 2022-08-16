@@ -1,18 +1,21 @@
 
 import './ProductItem.css'
-import ButtonAdd from './ButtonAdd'
-const ProductItem = ({productData}) =>{
+import {Link} from 'react-router-dom'
+const ProductItem = ({productsData}) =>{
   return(
    
     <div className="col-3"> 
     <div className="card">
   
      
-      <img src="./imgRE8.jpg" className="card-img-top" alt="..."/>
+      <img src={productsData.img} className="card-img-top" alt={productsData.name}/>
    <div className="card-body">
-    <h5 className="card-title">{productData.titulo}</h5>
-    <p className="card-text">{productData.descripcion}</p>
-    <ButtonAdd></ButtonAdd>
+    <h5 className="card-title">{productsData.name}</h5>
+    <p className="card-text">{productsData.description}</p>
+    <Link to={'/product/' + productsData.id}>
+    <button id='btnDetail' className="btn btn-primary">Ver Detalle</button>
+    </Link><br/>
+    
     
   </div>
   </div>

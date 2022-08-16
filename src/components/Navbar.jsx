@@ -15,7 +15,7 @@ export default function NavBar ({Boton1, Boton2, Boton3}) {
     <NavLink to='/categoria' className="col-3 btnNv">{Boton2}</NavLink>
     <NavLink to='/carrito' className="col-3 btnNv">{Boton3}</NavLink>
     </div>
-  <CartWidget className="col-3" ></CartWidget>
+    <CartWidget className="col-3" />
   
   </div>
 )}

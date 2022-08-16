@@ -1,16 +1,19 @@
-import ButtonAdd from './ButtonAdd'
+import { useContext, useEffect } from 'react'
+import { cartContext } from './CartContextComponent'
 import './CartWidget.css'
 
 
-const CartWidget =({addProducto})=> {
-    const carrito = []
+const CartWidget =()=> {
+    const {cart, totalCount} = useContext(cartContext)
+    useEffect(()=>{
+        totalCount
+    },[cart])
+    
+    
     return(
         <>
         <img className="icon" src="/CartWidgetIcon.png" alt="icono carrito"/>
-        <div>
-        <ButtonAdd carrito={carrito}/>
-            <p>cantidad: {addProducto}</p>
-        </div>
+         {totalCount} 
         </>
         
     )
