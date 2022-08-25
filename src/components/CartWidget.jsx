@@ -4,10 +4,10 @@ import './CartWidget.css'
 
 
 const CartWidget =()=> {
-    const {cart, totalCount} = useContext(cartContext)
+    const { totalCount} = useContext(cartContext)
     useEffect(()=>{
         totalCount
-    },[cart])
+    },[])
     
     
     return(

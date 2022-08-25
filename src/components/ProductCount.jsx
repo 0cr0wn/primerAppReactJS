@@ -20,7 +20,7 @@ export default function ProductCount ({productData}) {
 const onAdd = () => {
  addToCart(productData, count)
  setRemoveButton(true)
- console.log(cart);
+
 }
 
   

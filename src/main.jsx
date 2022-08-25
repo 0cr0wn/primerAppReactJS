@@ -1,7 +1,9 @@
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import App from './App'
 import { initializeApp } from "firebase/app";
+import App from './App'
+
+
 
 initializeApp({
   apiKey: "AIzaSyCk07_KmIxZETICPDvW2sJvdE_jwPmoD6M",
@@ -14,11 +16,10 @@ initializeApp({
 });
 
  const root = ReactDOM.createRoot(document.getElementById('root')).render(
-  
   <div>
   
   <App />
  
   </div>
+ 
 )
-
