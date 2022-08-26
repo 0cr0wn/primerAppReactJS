@@ -11,7 +11,7 @@ export default function CartContextComponent({children}) {
 
       for (let i = 0; i < cartAux.length; i++) {
          if(cartAux[i].id == productData.id){
-          cartAux[i].count = cartAtulioux[i].count + count;
+          cartAux[i].count = cartAux[i].count + count;
           inCart=true
          }
       }
@@ -23,17 +23,20 @@ export default function CartContextComponent({children}) {
       setCart(cartAux)
     }
     
-    const deleteFromCart=(id)=>{
+    const deleteFromCart=(id) => {
       setCart(cart.filter(productData => productData.id !== id))
-
+    }
+    const deleteAllFromCart=() => {
+      setCart([])
+    }
     useEffect(() => {
      setTotalCount(cart.reduce((acc, productData) => acc + productData.count,  0))
      setTotalToPay(cart.reduce((acc,productData) => acc + productData.count * productData.price, 0))
      }, [cart]);
-
+    
   return (
-    <cartContext.Provider value={{cart, addToCart, totalCount, deleteFromCart, totalToPay}}>
+    <cartContext.Provider value={{cart, addToCart, totalCount, deleteFromCart, totalToPay, deleteAllFromCart}}>
     {children}
     </cartContext.Provider>
   )
-}}
+}
