@@ -1,12 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.card{
+.card {
     width: 18rem;
     margin: 15px;
-    
-}
 
+}

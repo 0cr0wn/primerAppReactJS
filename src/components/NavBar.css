@@ -7,6 +7,7 @@
 .container-fluid{
     display: flex;
     background-color:#2741E8;
+    text-decoration: none;
 
 }
 
@@ -32,4 +33,8 @@
    color: black;
    background-color: #18236B; 
    border-radius: 15%;  
+}
+
+.logo {
+    width: 40%;
 }
